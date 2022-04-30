@@ -1,9 +1,27 @@
 <?php 
-  session_start();
+    session_start();
+    include("module/modul-conectivitate.php");
+    include("module/modul-functii.php");
 
-  include("module/modul-conectivitate.php");
-  include("module/modul-functii.php");
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        $user_name = $_POST['user_name'];
+        $password = $_POST['password'];
 
+        if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+        {
+            $user_id = random_num(5);
+            $query = "insert into users (user_id, user_name, password) values ('$user_id', '$user_name', '$password')";
+
+            mysqli_query($con, $query);
+            header("Location: login.php");
+            die;
+        }
+        else
+        {
+            echo "Please enter valid";
+        }
+    }
 ?>
 
 <!doctype html>
@@ -18,26 +36,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Car Configurator</title>
+    <title>Car Configurator SignUp</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <?php
-      include "module/modul-header.php";
-    ?>
-    <!-- HEADER -->
+    <div id="box">
+        <form method="post">
+            <input type="text" name="user_name">
+            <input type="password" name="password">
+            <input type="submit" value="Inregistrare">
 
-    <!-- GALERIE VEHICULE + FILTRU -->
-    <?php
-      include "module/modul-vehicule.php";
-    ?>
-    <!-- GALERIE VEHICULE + FILTRU -->
-
-    <!-- FOOTER -->
-    <?php 
-      include "module/modul-footer.php";
-    ?>
-    <!-- FOOTER -->
+            <a href="login.php">Login</a>
+        </form>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/d55f974d75.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

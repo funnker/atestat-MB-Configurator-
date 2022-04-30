@@ -6,7 +6,20 @@
     </a>
   </div>
   <div id="header-components">
-      <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+    <?php
+      if(!Login())
+      {
+        ?>
+        <a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+        <?php
+      }
+      else
+      {
+        ?>
+        <a href="logout.php">Logout</a>
+        <?php
+      }
+    ?>
   </div>
 </div>
 </header>

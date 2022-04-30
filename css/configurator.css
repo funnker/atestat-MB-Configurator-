@@ -1,0 +1,57 @@
+.configurator-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.header-insider {
+    min-width: 280px;
+    max-width: 2048px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conf-section{
+    display: flex;
+    float: none;
+    margin: 0 auto;
+justify-content: space-around;/* padding: 50px; */}
+
+.conf-nav {
+    justify-content: center;
+}
+
+.conf-nav-collapse {
+    margin: 0 auto;
+}
+
+.nav-item {
+    justify-items: center;
+    margin: 0 auto;
+}
+.nav-item {
+    cursor: pointer;
+}
+
+.dropdown {
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: flex;
+}
+
+.parent-card {
+    padding: 30px;
+}

@@ -24,4 +24,9 @@ $(document).ready(function() {
         $(this).find(".itemBox-button").removeClass("itemBox-configure-button");
         $(this).find(".itemBox-button").css("opacity: 0.5");
     });
+
+    //link
+    $('.itemBox').click(function() {
+      window.location.href="configurator.php";
+    });
 })

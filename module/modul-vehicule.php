@@ -37,12 +37,14 @@
                     $nume_masina = pathinfo($v[1], PATHINFO_FILENAME);
                     ?>
                         <div class="itemBox <?=TipMasina($tip)?>">
-                            <p class="itemBox-car"><?=ModelMasina($nume_masina, $tip)?></p>
-                            <div class="itemBox-link">
-                                <p class="itemBox-price">începând de la ****€</p>
-                                <img src="imagini/<?=htmlspecialchars($nf)?>" alt="<?=TipMasina($tip)?>" class="img-fluid my-3">
-                                <p class="itemBox-button">Configurați</p>
-                            </div>
+                            <a href="configurator.php?model=<?=trim(ModelMasina($nume_masina, $tip), " ")?>">
+                                <p class="itemBox-car"><?=ModelMasina($nume_masina, $tip)?></p>
+                                <div class="itemBox-link">
+                                    <p class="itemBox-price">începând de la ****€</p>
+                                    <img src="imagini/<?=htmlspecialchars($nf)?>" alt="<?=TipMasina($tip)?>" class="img-fluid my-3">
+                                    <p class="itemBox-button">Configurați</p>
+                                </div>
+                            </a>
                         </div>
                     <?php
                 }
