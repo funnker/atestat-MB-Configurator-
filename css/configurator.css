@@ -13,9 +13,18 @@
     margin-right: auto;
     position: relative;
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: space-between;
 }
+
+.header-insider p {
+    font-size: 18px;
+    padding: 3px;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; */
 
 .conf-section{
     display: flex;
@@ -52,6 +61,39 @@ justify-content: space-around;/* padding: 50px; */}
     display: flex;
 }
 
+nav a {
+    font-family: 'Rubik', sans-serif;
+    color: black;
+}
+
 .parent-card {
     padding: 30px;
+}
+
+.activ {
+    background-color: rgb(40, 40, 40);
+    color: whitesmoke;
+}
+
+.card-title{
+    font-family: 'Playfair Display', serif;
+}
+
+.wrapper {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.main-text {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 25px;
+}
+
+.back-to-home {
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
 }

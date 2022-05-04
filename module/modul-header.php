@@ -1,7 +1,7 @@
 <header>
   <div class="header-container">
   <div id="header-logo">
-    <a href="#">
+    <a href="index.php">
       <img src="https://logodownload.org/wp-content/uploads/2014/04/mercedes-benz-logo-1-1.png" alt="small-logo">
     </a>
   </div>
@@ -16,7 +16,10 @@
       else
       {
         ?>
-        <a href="logout.php">Logout</a>
+        <div style="justify-conent: space-between;">
+          <a href="logout.php">Logout</a>
+          <a href="favorites.php">Salvari</i></a>
+        </div>
         <?php
       }
     ?>

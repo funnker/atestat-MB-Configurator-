@@ -29,4 +29,8 @@ $(document).ready(function() {
     $('.itemBox').click(function() {
       window.location.href="configurator.php";
     });
+
+    $("#topBtn").click(function () {
+      $("html, body").animate({scrollTop: 0}, 1000);
+    });
 })

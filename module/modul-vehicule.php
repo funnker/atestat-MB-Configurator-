@@ -13,7 +13,7 @@
     closedir($dir);
 
 ?>
-<section>
+<main>
     <div class="section-header">
         <h1>Autovehicule disponibile</h1>
     </div>
@@ -51,4 +51,4 @@
             ?>
         </div>
     </div>
-</section>
+</main>
